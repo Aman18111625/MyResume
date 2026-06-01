@@ -5,25 +5,58 @@ export default function Experience() {
   const timeline = [
     {
       type: 'work',
-      role: 'Software Development Engineer (SDE-1)',
+      badge: 'FULL-TIME',
+      role: 'Software Development Engineer 2 (SDE-2)',
       company: 'Capillary Technologies',
-      duration: 'January 2023 - April 2026',
-      description: 'Designing and developing high-throughput customer engagement and CRM platforms. Building premium, responsive modular dashboards and user management tools, focusing on web optimization and client analytics interfaces.',
+      duration: 'May 2026 - Present · 1 mo',
+      description: 'Promoted to SDE-2, leading complex feature development and system design decisions for enterprise CRM and customer engagement platforms.',
       points: [
-        'Maintain and scale core frontend React repositories using TypeScript, ensuring clean coding standards and high code coverage.',
-        'Collaborate closely with backend teams to integrate complex REST APIs and design seamless state management using Redux Toolkit.',
-        'Refactor legacy features to improve lighthouse web vital scores, leading to faster page loads and improved client retention metrics.'
+        'Developed Archival Support to efficiently manage inactive templates, campaigns, and journeys.',
+        'Implemented Test/Control Support in Journeys to enhance user experience and data analysis.',
+        'Introduced Anonymous User Support in Journeys, allowing for broader user engagement and interaction.',
       ],
-      tech: ['HTML', 'CSS', 'JavaScript', 'Git', 'Node.js', 'React.js', 'TypeScript', 'Redux', 'Ant Design', 'Webpack', 'Express.js', 'MongoDB', 'WebDriverIO', 'Jest', 'React Testing Library', 'JIRA', 'PostMan', 'NewRelics', 'Grafana']
+      tech: ['React.js', 'TypeScript', 'Redux', 'Ant Design', 'Node.js', 'REST APIs', 'JIRA', 'Grafana', 'NewRelics']
+    },
+    {
+      type: 'work',
+      badge: 'FULL-TIME',
+      role: 'Software Development Engineer 1 (SDE-1)',
+      company: 'Capillary Technologies',
+      duration: 'Jul 2023 - Apr 2026 · 2 yrs 10 mos',
+      description: 'Designed and developed high-throughput customer engagement and CRM platforms. Built premium, responsive modular dashboards and user management tools, focusing on web optimization and client analytics interfaces.',
+      points: [
+        'Maintained and scaled core frontend React repositories using TypeScript, ensuring clean coding standards and high code coverage.',
+        'Collaborated closely with backend teams to integrate complex REST APIs and design seamless state management using Redux Toolkit.',
+        'Refactored legacy features to improve lighthouse web vital scores, leading to faster page loads and improved client retention metrics.',
+      ],
+      tech: ['HTML', 'CSS', 'JavaScript', 'Git', 'React.js', 'TypeScript', 'Redux', 'Ant Design', 'Webpack', 'Node.js', 'Express.js', 'MongoDB', 'Jest', 'React Testing Library', 'JIRA', 'PostMan', 'NewRelics', 'Grafana']
+    },
+    {
+      type: 'work',
+      badge: 'INTERNSHIP',
+      role: 'Software Development Engineer Intern',
+      company: 'Capillary Technologies',
+      duration: 'Jan 2023 - Jul 2023 · 7 mos · Remote',
+      description: 'Worked in the Core UI team, contributing to internal platform tools focused on UI automation, API automation, and localization support.',
+      points: [
+        'Developed and maintained UI automation flows to streamline testing and reduce regression time.',
+        'Built and tested backend services using Node.js, focusing on automation and test coverage.',
+        'Contributed to localized UI projects, ensuring internationalization compliance and consistent interface behaviour.',
+        'Gained experience with enterprise-scale frontend systems and agile team collaboration.',
+      ],
+      tech: ['React.js', 'Node.js', 'JavaScript', 'WebDriverIO', 'Jest', 'HTML', 'CSS', 'Git', 'PostMan']
     },
     {
       type: 'education',
+      badge: 'DEGREE',
       role: 'Bachelor Of Technology',
       company: 'National Institute Of Technology, Agartala',
       duration: '2019 - 2023',
       description: 'Completed B.Tech in Chemical Engineering with a solid foundation in computer science and data structures. Achieved an aggregate CGPA of 8.03/10.',
       points: [
         'Specialized in CS fundamentals: Data Structures and Algorithms, Object-Oriented Programming (OOP), Operating Systems (OS), and Database Management Systems (DBMS).',
+        'Represented NIT Agartala as a member of the drama team at Cultural Fests in IIT Guwahati and IIT Kharagpur.',
+        'Actively participated in Inter-Year Cricket Tournaments and Hindi Saptaah (Drama team, 2019).',
       ],
       tech: ['Data Structures & Algorithms', 'C++', 'Object-Oriented Programming', 'Operating Systems', 'Database Management Systems', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'Bootstrap', 'Git', 'Tailwind CSS']
     }
@@ -50,12 +83,23 @@ export default function Experience() {
               <div className="absolute top-0 right-0 w-24 h-24 bg-neonPurple/5 rounded-full blur-2xl group-hover:bg-neonPurple/10 transition-all pointer-events-none"></div>
 
               {/* Title & Organization */}
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                <div>
-                  <h3 className="text-xl font-bold text-white tracking-tight">{item.role}</h3>
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-3">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h3 className="text-xl font-bold text-white tracking-tight">{item.role}</h3>
+                    <span className={`text-[9px] font-bold font-mono px-2 py-0.5 rounded-full border tracking-widest uppercase
+                      ${item.badge === 'INTERNSHIP'
+                        ? 'bg-neonGreen/10 text-neonGreen border-neonGreen/30'
+                        : item.badge === 'DEGREE'
+                        ? 'bg-neonPink/10 text-neonPink border-neonPink/30'
+                        : 'bg-neonPurple/10 text-neonPurple border-neonPurple/30'
+                      }`}>
+                      {item.badge}
+                    </span>
+                  </div>
                   <p className="text-sm font-semibold text-neonCyan">{item.company}</p>
                 </div>
-                <div className="inline-flex items-center gap-1.5 text-xs font-mono text-gray-400 bg-darkBg/60 border border-darkBorder py-1 px-3 rounded-lg w-fit">
+                <div className="inline-flex items-center gap-1.5 text-xs font-mono text-gray-400 bg-darkBg/60 border border-darkBorder py-1 px-3 rounded-lg w-fit shrink-0">
                   <Calendar size={12} className="text-neonPurple" />
                   {item.duration}
                 </div>

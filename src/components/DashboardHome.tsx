@@ -192,38 +192,51 @@ export default function DashboardHome({ setActiveTab }: DashboardHomeProps) {
             </button>
           </div>
 
-          <div className="glass-panel p-6 rounded-2xl space-y-4">
-            <div className="flex justify-between items-start gap-4">
+          <div className="glass-panel p-6 rounded-2xl space-y-5">
+
+            {/* SDE-2 Entry */}
+            <div className="flex justify-between items-start gap-4 pb-5 border-b border-darkBorder">
               <div className="flex gap-4">
-                <div className="w-12 h-12 bg-white/5 rounded-xl border border-white/10 flex items-center justify-center text-neonCyan font-bold text-lg">
+                <div className="w-12 h-12 bg-white/5 rounded-xl border border-white/10 flex items-center justify-center text-neonCyan font-bold text-base shrink-0">
                   CT
                 </div>
-                <div>
-                  <h3 className="font-bold text-gray-100 text-lg">Software Development Engineer - 2</h3>
-                  <p className="text-gray-400 text-sm">Capillary Technologies • Full-time</p>
+                <div className="space-y-0.5">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h3 className="font-bold text-gray-100 text-base">Software Development Engineer - 2</h3>
+                    <span className="text-[9px] font-bold font-mono px-2 py-0.5 rounded-full border bg-neonPurple/10 text-neonPurple border-neonPurple/30 tracking-widest uppercase">
+                      CURRENT
+                    </span>
+                  </div>
+                  <p className="text-gray-400 text-sm">Capillary Technologies · Full-time</p>
                 </div>
               </div>
-              <span className="text-xs text-gray-500 font-mono bg-darkBg py-1 px-2.5 rounded-lg border border-darkBorder">
-                May,2026-Present
-              </span>
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-white/5 rounded-xl border border-white/10 flex items-center justify-center text-neonCyan font-bold text-lg">
-                  CT
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-100 text-lg">Software Development Engineer - 1</h3>
-                  <p className="text-gray-400 text-sm">Capillary Technologies • Full-time</p>
-                </div>
-              </div>
-              <span className="text-xs text-gray-500 font-mono bg-darkBg py-1 px-2.5 rounded-lg border border-darkBorder">
-                July,2023-Apr,2026
+              <span className="text-xs text-gray-500 font-mono bg-darkBg py-1 px-2.5 rounded-lg border border-darkBorder shrink-0">
+                May 2026 – Present
               </span>
             </div>
+
+            {/* SDE-1 Entry */}
+            <div className="flex justify-between items-start gap-4">
+              <div className="flex gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-xl border border-white/10 flex items-center justify-center text-neonCyan font-bold text-base shrink-0">
+                  CT
+                </div>
+                <div className="space-y-0.5">
+                  <h3 className="font-bold text-gray-100 text-base">Software Development Engineer - 1</h3>
+                  <p className="text-gray-400 text-sm">Capillary Technologies · Full-time</p>
+                </div>
+              </div>
+              <span className="text-xs text-gray-500 font-mono bg-darkBg py-1 px-2.5 rounded-lg border border-darkBorder shrink-0">
+                Jul 2023 – Apr 2026
+              </span>
+            </div>
+
+            {/* Description & Tech */}
             <p className="text-sm text-gray-400 leading-relaxed">
-              Leading the development of highly interactive CRM modules and enterprise dashboards. Collaborating with cross-functional teams to integrate secure RESTful APIs, streamline Redux architecture, and improve web vitals for customer-facing interfaces.
+              Building scalable customer engagement and CRM platforms. Leading development of enterprise dashboards, integrating REST APIs, optimising web vitals, and driving frontend architecture decisions.
             </p>
-            <div className="flex flex-wrap gap-2 pt-2">
-              {["React.js", "TypeScript", "Redux", "Tailwind CSS", "Ant Design", "REST APIs"].map((tech, idx) => (
+            <div className="flex flex-wrap gap-2 pt-1">
+              {["React.js", "TypeScript", "Redux", "Ant Design", "Node.js", "REST APIs"].map((tech, idx) => (
                 <span key={idx} className="text-xs px-2.5 py-1 bg-neonCyan/5 border border-neonCyan/20 rounded-lg text-neonCyan font-mono">
                   {tech}
                 </span>
