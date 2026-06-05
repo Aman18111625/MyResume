@@ -17,7 +17,7 @@ export default function Contact() {
     const subject = encodeURIComponent(`Portfolio Message from ${formData.name}`);
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
     window.location.href = `mailto:amangupta326519@gmail.com?subject=${subject}&body=${body}`;
-    
+
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -47,8 +47,8 @@ export default function Contact() {
     {
       icon: MapPin,
       label: "Location",
-      value: "Khairabad, Dist.-Kota, Rajasthan, 326529",
-      link: "https://maps.google.com/?q=Khairabad,Kota,Rajasthan",
+      value: "Bengaluru, India",
+      link: "https://www.google.com/maps/place/RSun+Clover+Apartment/data=!4m2!3m1!1s0x0:0x7f709aafeb08cc3f?sa=X&ved=1t:2428&ictx=111",
       color: "text-neonPink bg-neonPink/5 border-neonPink/20"
     }
   ];
@@ -75,7 +75,7 @@ export default function Contact() {
             {contactInfo.map((info, idx) => {
               const Icon = info.icon;
               return (
-                <a 
+                <a
                   key={idx}
                   href={info.link}
                   target="_blank"
@@ -117,44 +117,44 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-1.5">
                   <label className="text-xs font-mono text-gray-400">Your Name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    placeholder="Enter your name" 
+                    placeholder="Enter your name"
                     className="w-full bg-darkBg/60 border border-darkBorder rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-neonPurple/50 focus:ring-1 focus:ring-neonPurple/30 transition-all"
                   />
                 </div>
 
                 <div className="space-y-1.5">
                   <label className="text-xs font-mono text-gray-400">Your Email</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    placeholder="Enter your email" 
+                    placeholder="Enter your email"
                     className="w-full bg-darkBg/60 border border-darkBorder rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-neonPurple/50 focus:ring-1 focus:ring-neonPurple/30 transition-all"
                   />
                 </div>
 
                 <div className="space-y-1.5">
                   <label className="text-xs font-mono text-gray-400">Your Message</label>
-                  <textarea 
+                  <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
                     rows={4}
-                    placeholder="Type your message here..." 
+                    placeholder="Type your message here..."
                     className="w-full bg-darkBg/60 border border-darkBorder rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-neonPurple/50 focus:ring-1 focus:ring-neonPurple/30 transition-all resize-none"
                   ></textarea>
                 </div>
 
-                <button 
+                <button
                   type="submit"
                   className="w-full py-3 rounded-xl bg-gradient-to-r from-neonPurple to-neonCyan text-white font-semibold text-sm hover:shadow-neon-purple hover:scale-[1.01] transition-all flex items-center justify-center gap-2"
                 >

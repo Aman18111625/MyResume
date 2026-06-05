@@ -37,7 +37,7 @@ export default function Skills() {
       color: "text-neonPink bg-neonPink/5 border-neonPink/20",
       skills: [
         "Data Structures & Algorithms",
-        "C / C++",
+        "C++",
         "Object Oriented Programming (OOP)",
         "Operating Systems (OS)",
         "Database Management Systems (DBMS)"
@@ -52,7 +52,12 @@ export default function Skills() {
         "Webpack / Build Tools",
         "npm / yarn",
         "VS Code",
-        "Chrome Developer Tools"
+        "Chrome Developer Tools",
+        "Cursor",
+        "Antigravity",
+        "AWS",
+        "MongoDB Atlas",
+        "Claude Code"
       ]
     }
   ];
@@ -68,8 +73,8 @@ export default function Skills() {
         {skillCategories.map((category, idx) => {
           const Icon = category.icon;
           return (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className="glass-panel p-6 rounded-2xl border border-white/5 space-y-4 hover:border-white/10 transition-all duration-300"
             >
               {/* Category Header */}
@@ -83,8 +88,8 @@ export default function Skills() {
               {/* Skills Grid */}
               <div className="flex flex-wrap gap-2 pt-2">
                 {category.skills.map((skill, sIdx) => (
-                  <div 
-                    key={sIdx} 
+                  <div
+                    key={sIdx}
                     className="flex items-center gap-1.5 px-3 py-1.5 bg-darkBg/60 border border-darkBorder rounded-xl text-xs text-gray-300 hover:text-white hover:border-darkBorder/80 hover:bg-darkBg transition-all font-mono"
                   >
                     <CheckCircle2 size={12} className="text-neonGreen" />

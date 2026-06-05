@@ -68,11 +68,6 @@ export default function DashboardHome({ setActiveTab }: DashboardHomeProps) {
 
         {/* Text Details */}
         <div className="flex-1 space-y-6 z-10">
-          <div className="inline-flex items-center gap-2 bg-neonPurple/10 border border-neonPurple/30 rounded-full py-1.5 px-4 text-xs font-mono text-neonPurple font-semibold shadow-sm">
-            <Sparkles size={14} className="animate-pulse" />
-            <span>AVAILABLE FOR FULL-STACK & FRONTEND ROLES</span>
-          </div>
-
           <div className="space-y-2">
             <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight">
               Hello, I'm <span className="bg-gradient-to-r from-neonPurple via-neonPink to-neonCyan bg-clip-text text-transparent">Aman Gupta</span>

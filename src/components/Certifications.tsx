@@ -66,6 +66,18 @@ export default function Certifications() {
       date: "Verified",
       link: "https://www.hackerrank.com/certificates/66ae4d60f6c5",
       id: "66ae4d60f6c5"
+    },
+    {
+      name: "Namaste JavaScript",
+      issuer: "NamasteDev",
+      date: "Verified",
+      link: "https://drive.google.com/file/d/1Y5nk0BDONH01EjcSXco3kJ7b6ZRaVcOc/view?usp=drive_link"
+    },
+    {
+      name: "Namaste React",
+      issuer: "NamasteDev",
+      date: "Verified",
+      link: "https://drive.google.com/file/d/1JBwS3UV-4-TR3XW0y4WVtGLefHakKFqi/view?usp=drive_link"
     }
   ];
 
@@ -87,7 +99,7 @@ export default function Certifications() {
 
           <div className="grid grid-cols-1 gap-4">
             {achievements.map((item, idx) => (
-              <div 
+              <div
                 key={idx}
                 className={`glass-panel p-5 rounded-2xl border flex items-start gap-4 hover:border-white/10 transition-all ${item.accent}`}
               >
@@ -117,7 +129,7 @@ export default function Certifications() {
 
           <div className="grid grid-cols-1 gap-4">
             {certificates.map((cert, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="glass-panel p-5 rounded-2xl border border-white/5 flex flex-col justify-between h-40 hover:border-neonCyan/30 transition-all"
               >
@@ -129,10 +141,10 @@ export default function Certifications() {
                     <span className="text-xs font-mono text-gray-500">{cert.date}</span>
                   </div>
                   <h4 className="text-sm font-bold text-white tracking-tight leading-snug">{cert.name}</h4>
-                  <p className="text-[10px] text-gray-500 font-mono">ID: {cert.id}</p>
+                  {cert.id && <p className="text-[10px] text-gray-500 font-mono">ID: {cert.id}</p>}
                 </div>
 
-                <a 
+                <a
                   href={cert.link}
                   target="_blank"
                   rel="noreferrer"
