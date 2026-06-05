@@ -3,7 +3,6 @@ import {
   ArrowUpRight,
   Terminal,
   Award,
-  Sparkles,
   Activity,
   ExternalLink
 } from 'lucide-react';
